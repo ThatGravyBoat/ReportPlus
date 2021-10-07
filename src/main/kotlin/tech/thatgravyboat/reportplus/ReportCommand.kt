@@ -6,7 +6,6 @@ import gg.essential.universal.UChat
 import net.minecraft.client.Minecraft
 import net.minecraft.command.CommandBase
 import net.minecraft.command.ICommandSender
-import org.lwjgl.Sys
 import tech.thatgravyboat.reportplus.ui.ReportGui
 
 class ReportCommand : CommandBase() {
@@ -19,7 +18,7 @@ class ReportCommand : CommandBase() {
         if (args == null || args.isEmpty()) {
             return UChat.chat("${ChatColor.RED}Please specify a player you would like to report (${getCommandUsage(sender)})")
         }
-        if (args.size > 1) {
+        if (args.size > 1 || !Config.enable) {
             UChat.say("/report ${args.joinToString(" ")}")
         } else {
             if (Minecraft.getMinecraft().session.profile.name.equals(args[0], true)) {

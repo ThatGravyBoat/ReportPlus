@@ -9,7 +9,6 @@ import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.common.event.FMLInitializationEvent
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
-import tech.thatgravyboat.reportplus.ui.ReportGui
 
 @Mod(
     name = "Report+",
@@ -25,6 +24,7 @@ object RewardClaim {
     fun onFMLInitialization(event: FMLInitializationEvent?) {
         MinecraftForge.EVENT_BUS.register(this)
         ClientCommandHandler.instance.registerCommand(ReportCommand())
+        EssentialAPI.getCommandRegistry().registerCommand(Command())
     }
 
     @Mod.EventHandler
@@ -35,6 +35,7 @@ object RewardClaim {
     @SubscribeEvent
     fun onScreen(event: GuiOpenEvent) {
         if (
+            Config.enable &&
             EssentialAPI.getGuiUtil().openedScreen() == null &&
             event.gui is GuiScreenBook &&
             System.currentTimeMillis() - userReportedTime <= 2500
