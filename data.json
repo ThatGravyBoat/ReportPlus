@@ -1,0 +1,48 @@
+{
+  "reportTypes" : [
+    {
+      "reasonId": "CTG",
+      "displayName": "Cheating"
+    },
+    {
+      "reasonId": "BOO",
+      "displayName": "Boosting"
+    },
+    {
+      "reasonId": "CHR",
+      "displayName": "Public Chat Abuse"
+    },
+    {
+      "reasonId": "PC_C",
+      "displayName": "Party Chat Abuse"
+    },
+    {
+      "reasonId": "GU_C",
+      "displayName": "Guild Chat Abuse"
+    },
+    {
+      "reasonId": "DM_C",
+      "displayName": "DM Abuse"
+    },
+    {
+      "reasonId": "BDN",
+      "displayName": "Bad Name"
+    },
+    {
+      "reasonId": "CTT",
+      "displayName": "Cross Teaming"
+    },
+    {
+      "reasonId": "IAS",
+      "displayName": "Bad Skin/Cape"
+    },
+    {
+      "reasonId": "IAP",
+      "displayName": "Bad Pet Name"
+    },
+    {
+      "reasonId": "GNT",
+      "displayName": "Guild Name/Tag"
+    }
+  ]
+}

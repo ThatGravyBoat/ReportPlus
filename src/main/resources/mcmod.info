@@ -1,0 +1,18 @@
+[
+  {
+    "modid": "reportplus",
+    "name": "Report Plus",
+    "description": "A better reporting menu.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      ""
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
