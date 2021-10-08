@@ -25,7 +25,7 @@ object Config : Vigilant(File("./config/reportplus.toml")) {
 
     @Property(type = PropertyType.BUTTON, "Github", "General", "Self Promotion", placeholder = "Visit")
     fun github() {
-        UDesktop.browse(URI("https://github.com/ThatGravyBoat/RewardClaim"))
+        UDesktop.browse(URI("https://github.com/ThatGravyBoat/ReportPlus"))
     }
 
     @Property(type = PropertyType.BUTTON, "YouTube", "General", "Self Promotion", placeholder = "Visit")

@@ -3,7 +3,6 @@ package tech.thatgravyboat.reportplus.ui
 import gg.essential.elementa.WindowScreen
 import gg.essential.elementa.components.*
 import gg.essential.elementa.constraints.CenterConstraint
-import gg.essential.elementa.constraints.RainbowColorConstraint
 import gg.essential.elementa.constraints.SiblingConstraint
 import gg.essential.elementa.dsl.*
 import gg.essential.elementa.utils.withAlpha
@@ -33,9 +32,6 @@ class ReportGui(private val username: String) : WindowScreen() {
             x = CenterConstraint()
             y = 7.pixels() + 2.5.percent()
             width = 100.percent()
-            if ("thatgravyboat".equals(username, true)) {
-                color = RainbowColorConstraint(speed = 1f)
-            }
         } childOf reportBackground
 
         UIContainer().let { container ->
