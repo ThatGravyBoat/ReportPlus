@@ -1,6 +1,6 @@
 package tech.thatgravyboat.reportplus
 
-import gg.essential.api.EssentialAPI
+import gg.essential.api.utils.GuiUtil
 import gg.essential.universal.ChatColor
 import gg.essential.universal.UChat
 import net.minecraft.client.Minecraft
@@ -24,14 +24,17 @@ class ReportCommand : CommandBase() {
             if (Minecraft.getMinecraft().session.profile.name.equals(args[0], true)) {
                 return UChat.chat("${ChatColor.RED}You can not report yourself!")
             }
-            EssentialAPI.getGuiUtil().openScreen(ReportGui(args[0]))
+            if (args[0].equals("confirm", false)) {
+                return UChat.say("/report ${args.joinToString(" ")}")
+            }
+            GuiUtil.open(ReportGui(args[0]))
         }
     }
 
     companion object {
         fun finalizeReport(username: String, id: String) {
             UChat.say("/report $username -b $id -C")
-            RewardClaim.userReportedTime = System.currentTimeMillis()
+            ReportPlus.userReportedTime = System.currentTimeMillis()
         }
     }
 }

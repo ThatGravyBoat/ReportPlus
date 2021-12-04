@@ -18,6 +18,11 @@ object Config : Vigilant(File("./config/reportplus.toml")) {
         UDesktop.browse(URI("https://discord.gg/jRhkYFmpCa"))
     }
 
+    @Property(type = PropertyType.BUTTON, "Patreon", "General", "Self Promotion", placeholder = "Visit")
+    fun patreon() {
+        UDesktop.browse(URI("https://patreon.com/thatgravyboat"))
+    }
+
     @Property(type = PropertyType.BUTTON, "Twitter", "General", "Self Promotion", placeholder = "Visit")
     fun twitter() {
         UDesktop.browse(URI("https://twitter.com/ThatGravyBoat"))

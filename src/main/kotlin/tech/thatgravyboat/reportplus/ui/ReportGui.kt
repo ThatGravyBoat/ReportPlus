@@ -52,7 +52,7 @@ class ReportGui(private val username: String) : WindowScreen() {
                     color = VigilancePalette.getScrollBar().constraint
                 } childOf container
 
-                setScrollBarComponent(scrollBar, true, false)
+                setScrollBarComponent(scrollBar, hideWhenUseless = true, isHorizontal = false)
                 Array(ExternalConfiguration.reportTypes.size) { UIReportOption(ExternalConfiguration.reportTypes[it]) childOf this }.also { array ->
                     for (option in array) {
                         option.onMouseClick {

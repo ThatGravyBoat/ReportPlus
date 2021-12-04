@@ -16,7 +16,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
     version = "1.0.0",
     modLanguageAdapter = "gg.essential.api.utils.KotlinAdapter"
 )
-object RewardClaim {
+object ReportPlus {
 
     var userReportedTime: Long = 0
 
