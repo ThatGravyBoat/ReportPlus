@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 @Mod(
     name = "Report+",
     modid = "reportplus",
-    version = "1.0.0",
+    version = "1.0.1",
     modLanguageAdapter = "gg.essential.api.utils.KotlinAdapter"
 )
 object ReportPlus {
