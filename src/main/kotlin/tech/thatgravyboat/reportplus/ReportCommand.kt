@@ -1,5 +1,6 @@
 package tech.thatgravyboat.reportplus
 
+import gg.essential.api.EssentialAPI
 import gg.essential.api.utils.GuiUtil
 import gg.essential.universal.ChatColor
 import gg.essential.universal.UChat
@@ -18,7 +19,7 @@ class ReportCommand : CommandBase() {
         if (args == null || args.isEmpty()) {
             return UChat.chat("${ChatColor.RED}Please specify a player you would like to report (${getCommandUsage(sender)})")
         }
-        if (args.size > 1 || !Config.enable) {
+        if (args.size > 1 || !Config.enable || !EssentialAPI.getMinecraftUtil().isHypixel()) {
             UChat.say("/report ${args.joinToString(" ")}")
         } else {
             if (Minecraft.getMinecraft().session.profile.name.equals(args[0], true)) {
