@@ -1,6 +1,20 @@
 {
   "reportTypes" : [
     {
+      "reasonId": "one",
+      "displayName": "Hypixel changed"
+    },
+    {
+      "reasonId": "two",
+      "displayName": "disable using"
+    },
+    {
+      "reasonId": "three",
+      "displayName": "'/reportplus' for now."
+    }
+  ],
+  "oldReportTypes" : [
+    {
       "reasonId": "CTG",
       "displayName": "Cheating"
     },
